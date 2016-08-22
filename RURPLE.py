@@ -1,2 +1,3 @@
-import instrucciones
-print (instrucciones.instrucciones(instrucciones))
+import mapa
+n1=input("")
+print (mapa.mapitas(n1))

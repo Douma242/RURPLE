@@ -1,7 +1,7 @@
 
 def mapitas(mapa):
 	mapitas=[]
-	f= open("MapitasPalRobocop/mapa1.txt", "r")
+	f= open(mapa, "r")
 	for linea in f:
 		l=list(linea.strip())
 		mapitas.append(l)
