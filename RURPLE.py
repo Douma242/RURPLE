@@ -1,2 +1,2 @@
-import mapa
-print (mapa.mapitas(mapa))
+import instrucciones
+print (instrucciones.instrucciones(instrucciones))
