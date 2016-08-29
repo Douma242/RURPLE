@@ -9,8 +9,16 @@ class Robot(object):
 		self.mapa= mapa
 	
 	def mover(self):
-		self.moverse= 1
+		
 
 	def rotar(self):
-		pass
+		if self.direccion=="UP":
+			self.direccion=">"
+		elif self.direccion==">":
+			self.direccion="v"
+		elif self.direccion=="v":
+			self.direccion="<"
+		elif self.direccion=="<":
+			self.direccion="UP"
+			
 		
