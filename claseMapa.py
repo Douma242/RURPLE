@@ -8,4 +8,14 @@ class Mapa(object):
 		self.robot= robot
 	def moneda(self, monedita):
 		self.monedas.append(monedita)
+
+def mapitas(mapa):
+	mapitas=[]
+	f= open(mapa, "r")
+	for linea in f:
+		l=list(linea.strip())
+		mapitas.append(l)
+	return mapitas
+	f.close()
+
 		

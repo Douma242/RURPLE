@@ -1,3 +1,3 @@
-import mapa
+import claseMapa
 n1=input("")
-print (mapa.mapitas(n1))
+print (claseMapa.mapitas(n1))

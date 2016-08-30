@@ -3,7 +3,7 @@ class Robot(object):
 		self.x= x
 		self.y= y
 		self.monedas= 0
-		self.direccion= 'UP'
+		self.direccion= "^"
 		self.mapa= None
 	def colocar_mapa(self, mapa):
 		self.mapa= mapa
@@ -12,13 +12,13 @@ class Robot(object):
 		
 
 	def rotar(self):
-		if self.direccion=="UP":
+		if self.direccion=="^":
 			self.direccion=">"
 		elif self.direccion==">":
 			self.direccion="v"
 		elif self.direccion=="v":
 			self.direccion="<"
-		elif self.direccion=="<":
-			self.direccion="UP"
+		else: 
+			self.direccion="^"
 			
 		
