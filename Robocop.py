@@ -5,11 +5,19 @@ class Robot(object):
 		self.monedas= 0
 		self.direccion= "^"
 		self.mapa= None
+		
 	def colocar_mapa(self, mapa):
 		self.mapa= mapa
 	
 	def mover(self):
-		
+		if self.direccion=="^":
+			self.y -= 1
+		elif self.direccion==">":
+			self.x += 1
+		elif self.direccion=="v":
+			self.y += 1
+		else: 
+			self.x -= 1
 
 	def rotar(self):
 		if self.direccion=="^":
@@ -20,5 +28,8 @@ class Robot(object):
 			self.direccion="<"
 		else: 
 			self.direccion="^"
+
+	def pick_monedasas(self, x, y):
+		
 			
 		
