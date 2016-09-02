@@ -4,10 +4,17 @@ class Mapa(object):
 		self.alto=alto
 		self.monedas=[]
 		self.robot= None
+
 	def robocop(self, robot):
 		self.robot= robot
+
 	def moneda(self, monedita):
 		self.monedas.append(monedita)
+
+	def dibujar_mapa(self, ancho, alto):
+		for i in alto:
+			for j in i:
+
 
 def mapitas(mapa):
 	mapitas=[]
