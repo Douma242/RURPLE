@@ -39,16 +39,9 @@ class Mapa(object):
 		return resultado
 
 	def kit9r(self, x, y):
-        indice_coincidencia = -1
-        for indice in range(len(self.monedas)):
-            moneda = self.monedas[indice]
-            if moneda.x == x and moneda.y == y:
-                indice_coincidencia = indice
-                break
-
-        if indice_coincidencia >= 0:
-            self.monedas.pop(indice_coincidencia)
-
+        if self.robot.x==x and self.robot.y==y:
+        	self.moneda.x=-1
+        	self.moneda.y=-1
 
 
 		
