@@ -9,11 +9,11 @@ class Mapa(object):
 		self.robot= robot
 
 	def cuente(self, x, y):
-		cont=0
+		conta=0
 		for moneda in self.monedas:
 			if moneda.x==x and moneda.y==y:
-				cont += 1
-		return cont
+				conta += 1
+		return conta
 
 	def agregar_moneda(self, monedita):
 		self.monedas.append(monedita)
@@ -26,10 +26,10 @@ class Mapa(object):
 			for x in range(self.ancho):
 
 				if x == self.robot.x and y == self.robot.y:
-                    resultado += self.robot.dibujar()
+                    resultado += self.robot.rotar()
 
-                elif self.contar_monedas_en(x, y) > 0:
-                    resultado += self.contar_monedas_en(x, y)
+                elif self.cuente(x, y) > 0:
+                    resultado += self.cuente(x, y)
                 
                 else:
                     resultado += " "
@@ -48,7 +48,6 @@ class Mapa(object):
 
         if indice_coincidencia >= 0:
             self.monedas.pop(indice_coincidencia)
-
 
 
 
