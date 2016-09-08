@@ -30,9 +30,9 @@ class Robot(object):
 			self.direccion="^"
 
 	def recoger(self, x, y):
-        if self.mapa.cuente(self.x, self.y) > 0:
-            self.monedas += 1
-            self.mapa.kit9r(x, y)
+		if self.mapa.cuente(self.x, self.y) > 0:
+			self.monedas += 1
+			self.mapa.kit9r(x, y)
 
 
 		

@@ -26,22 +26,22 @@ class Mapa(object):
 			for x in range(self.ancho):
 
 				if x == self.robot.x and y == self.robot.y:
-                    resultado += self.robot.rotar()
+					resultado += self.robot.rotar()
 
-                elif self.cuente(x, y) > 0:
-                    resultado += self.cuente(x, y)
+				elif self.cuente(x, y) > 0:
+					resultado += self.cuente(x, y)
                 
-                else:
-                    resultado += " "
+				else:
+					resultado += " "
 
-            resultado += "\n"
+			resultado += "\n"
 	
 		return resultado
 
 	def kit9r(self, x, y):
-        if self.robot.x==x and self.robot.y==y:
-        	self.moneda.x=-1
-        	self.moneda.y=-1
+		if self.robot.x==x and self.robot.y==y:
+			self.moneda.x=-1
+			self.moneda.y=-1
 
 
 		
