@@ -1,7 +1,7 @@
 class Robot(object):
-	def __init__(self, x, y):
-		self.x= x
-		self.y= y
+	def __init__(self):
+		self.x= 0
+		self.y= 0
 		self.monedas= 0
 		self.direccion= "^"
 		self.mapa= None
@@ -32,7 +32,7 @@ class Robot(object):
 	def recoger(self, x, y):
 		if self.mapa.cuente(self.x, self.y) > 0:
 			self.monedas += 1
-			self.mapa.kit9r(x, y)
+			self.mapa.quitar(x, y)
 
 
 		

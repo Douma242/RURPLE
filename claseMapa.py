@@ -1,7 +1,7 @@
 class Mapa(object):
-	def __init__(self, ancho, alto):
-		self.ancho=ancho
-		self.alto=alto
+	def __init__(self):
+		self.ancho=80
+		self.alto=25
 		self.monedas=[]
 		self.robot= None
 
@@ -22,10 +22,10 @@ class Mapa(object):
 
 		resultado=""
 
-		for y in range(self.alto):
-			for x in range(self.ancho):
+		for y in range(alto):
+			for x in range(ancho):
 
-				if x == self.robot.x and y == self.robot.y:
+				if self.robot.y == y and self.robot.x == x:
 					resultado += self.robot.rotar()
 
 				elif self.cuente(x, y) > 0:
@@ -38,7 +38,7 @@ class Mapa(object):
 	
 		return resultado
 
-	def kit9r(self, x, y):
+	def quitar(self, x, y):
 		if self.robot.x==x and self.robot.y==y:
 			self.moneda.x=-1
 			self.moneda.y=-1
